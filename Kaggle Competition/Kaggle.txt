@@ -1,0 +1,19 @@
+" Saari cheeze unke particular block mei bhr dena "
+
+Competition Name: Titanic: Machine Learning from Disaster
+
+Part 1: Problem Description
+
+Problem Description: The task is to predict whether a given passenger survived the sinking of the Titanic based on various attributes. These attributes include age, gender, passenger class, fare paid, number of family members aboard, and other personal information. The overall goal is to build a predictive model that can accurately classify passengers as survivors or non-survivors. The data consists of a training set with known outcomes and a test set where the outcomes are to be predicted. Solutions are evaluated based on the accuracy of predictions on the test dataset.
+
+Part 2: Analysis Approach
+To tackle this problem, I first explored the data to understand the distribution of variables and identify any missing values. I then performed data preprocessing, including handling missing values and encoding categorical variables. I split the data by gender and applied different classification techniques. For females, I used a simple rule-based approach, assuming all females survived. For males, I trained a Random Forest classifier, considering attributes like age, passenger class, and fare. I also experimented with other classifiers like Logistic Regression and Support Vector Machines to compare their performance.
+
+Part 3: Initial Solution
+I implemented my approach using Python, leveraging libraries such as Pandas for data manipulation, Scikit-learn for machine learning models, and Matplotlib for visualization. I partitioned the data into training and testing sets and applied the preprocessing steps. I then trained the Random Forest classifier on the training set and evaluated its performance on the test set. One challenge I faced was dealing with missing values in the age column, which I addressed by imputing the median age.
+
+Part 4: Initial Solution Analysis
+My initial approach yielded an accuracy score of 0.78, which was a decent start but not optimal. The rule-based approach for females worked well, but the Random Forest classifier for males had room for improvement. One issue was that the model overfitted the training data, leading to lower performance on the test set. Additionally, some important features like passenger class were not fully utilized in the initial model.
+
+Part 5: Revised Solution and Analysis
+To improve my solution, I included the passenger class attribute and experimented with feature engineering, such as creating new features based on family size and ticket fare. I also tuned the hyperparameters of the Random Forest classifier using GridSearchCV. These changes led to an improved accuracy score of 0.82. Including the passenger class attribute and optimizing the model parameters significantly enhanced the model’s performance.
